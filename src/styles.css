@@ -29,14 +29,13 @@ form > button {
   top: 5px;
   right: -32px;
   padding: 10px;
-  text-transform: uppercase;
 }
 
 input[type="text"] {
   padding: 15px 20px;
   border-radius: 20px;
-  border: 1px solid transparent;
-  background-color: #ddd;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   outline: none;
 }

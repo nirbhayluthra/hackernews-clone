@@ -1,12 +1,11 @@
-import React, { useState, useRef, useEffect, Suspense, lazy } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Loading from "./load";
-import { PostsService } from "./axios";
+import { Axios } from "./axios";
 import "./styles.css";
+import PostsList from "./list";
 
-const PostsList = lazy(() => import("./list"));
-
-function App() {
+function App() {  
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
@@ -18,7 +17,7 @@ function App() {
     setIsLoading(() => true);
 
     try {
-      const { data } = await PostsService.get(q);
+      const { data } = await Axios.get(q);
       setPosts(data.hits);
       setHasError(() => false);
       setIsLoading(() => false);
@@ -46,7 +45,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hacker News ApnaHood</h1>
+      <h1>World News</h1>
       <form>
         <input
           type="text"
@@ -61,15 +60,13 @@ function App() {
       </form>
       {hasError && (
         <div className="error">
-          some error occured( ({messageError})
+          some error ( ({messageError})
         </div>
       )}
       {isLoading ? (
         <Loading />
       ) : (
-        <Suspense fallback={<Loading />}>
           <PostsList list={posts} />
-        </Suspense>
       )}
     </div>
   );

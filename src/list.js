@@ -5,14 +5,13 @@ const PostsList = ({ list }) => {
     <ul>
       {list.map((post, index) => {
         return (
-          !!post?.title?.length && (
-            <li key={post.created_at_i}>
+          post?.title?.length && (
+            <li>
               <a href={post.url} rel="noopener noreferrer" target="_blank">
                 <h3>{`${index + 1}) ${post.title}`}</h3>
                 {console.log(post)}
-       
               </a>
-              <h6 >{post.author} {JSON.stringify(post.num_comments)}</h6>
+              <h5 >Points:-{JSON.stringify(post.points)} Comments:- {JSON.stringify(post.num_comments)}</h5>
             </li>
           )
         );
