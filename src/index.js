@@ -68,6 +68,8 @@ function App() {
       ) : (
           <PostsList list={posts} />
       )}
+
+      <h3 className="nirbhay">Made by Nirbhay</h3>
     </div>
   );
 }
