@@ -1,18 +1,24 @@
+body{
+    background-color: rgb(212, 212, 212);
+}
 .App {
-  padding: 4rem;
-  max-width: 960px;
+  padding: 2rem;
+  max-width: 70%;
   margin: 0 auto;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
 }
 
 ul {
   list-style: none;
   padding: 0;
+  
 }
 
 h1,
 h2 {
   text-align: center;
+  color: rgb(18, 10, 88);
 }
 
 form {
@@ -38,6 +44,8 @@ input[type="text"] {
   background-color: rgb(255, 255, 255);
   width: 100%;
   outline: none;
+  font-size: large;
+  color: rgb(37, 37, 37);
 }
 
 input[type="text"]:focus {
@@ -45,7 +53,7 @@ input[type="text"]:focus {
 }
 
 a {
-  color: #333;
+  color: rgb(18, 10, 88);
 }
 
 .loading,
@@ -56,9 +64,9 @@ a {
   text-align: center;
 }
 
-h6{
+h5{
    margin-left: 5%;
-
+   color: rgb(117, 10, 10);
 }
 .nirbhay{
     position: relative;

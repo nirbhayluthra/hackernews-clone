@@ -11,7 +11,7 @@ const PostsList = ({ list }) => {
                 <h3>{`${index + 1}: ${post.title}`}</h3>
                 {console.log(post)}
               </a>
-              <h5 >Points:-{JSON.stringify(post.points)} Comments:- {JSON.stringify(post.num_comments)}</h5>
+              <h5 >{`Points:-${JSON.stringify(post.points)}   &   Comments:- ${JSON.stringify(post.num_comments)}`}</h5>
             </li>
           )
         );
